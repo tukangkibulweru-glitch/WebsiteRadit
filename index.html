@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhotoMarket</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:#fff;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#00A870;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#333;
+    margin-left:25px;
+    font-weight:bold;
+}
+
+/* Hero */
+.hero{
+    height:500px;
+    background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600")
+    center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+    position:relative;
+    color:#fff;
+    text-align:center;
+    width:80%;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.search-box{
+    display:flex;
+    max-width:700px;
+    margin:auto;
+}
+
+.search-box input{
+    flex:1;
+    padding:18px;
+    border:none;
+    font-size:18px;
+    border-radius:8px 0 0 8px;
+}
+
+.search-box button{
+    padding:18px 35px;
+    background:#00A870;
+    color:white;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:0 8px 8px 0;
+}
+
+/* Gallery */
+.section{
+    padding:60px 8%;
+}
+
+.section h2{
+    margin-bottom:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.info{
+    padding:15px;
+}
+
+.price{
+    color:#00A870;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+button.buy{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#00A870;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">PhotoMarket</div>
+
+    <div class="menu">
+        <a href="#">Foto</a>
+        <a href="#">Video</a>
+        <a href="#">Kategori</a>
+        <a href="#">Masuk</a>
+    </div>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+
+<h1>Temukan Foto Berkualitas Tinggi</h1>
+
+<div class="search-box">
+<input type="text" placeholder="Cari foto...">
+<button>Cari</button>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+
+<h2>Foto Populer</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://picsum.photos/600/400?1">
+<div class="info">
+<h3>Sunset Beach</h3>
+<p class="price">Rp50.000</p>
+<button class="buy">Beli Lisensi</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/600/400?2">
+<div class="info">
+<h3>Mountain</h3>
+<p class="price">Rp75.000</p>
+<button class="buy">Beli Lisensi</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/600/400?3">
+<div class="info">
+<h3>City Night</h3>
+<p class="price">Rp60.000</p>
+<button class="buy">Beli Lisensi</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/600/400?4">
+<div class="info">
+<h3>Forest</h3>
+<p class="price">Rp80.000</p>
+<button class="buy">Beli Lisensi</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Raditio Dwi Wibisono. OAA2501.
+</footer>
+
+</body>
+</html>
